@@ -6,12 +6,12 @@
         verify: { projectID: '65ef96f503eb30fc2d06b8b1' },
         url: 'https://general-runtime.voiceflow.com',
         versionID: 'production',
-        voice: {
-          url: "https://runtime-api.voiceflow.com"
+        assistant: {
+          persistence: 'localStorage' // Optional: keeps chat open across refreshes
         }
       });
 
-      // 👇 This line forces the chat to open automatically
+      // This line ensures the widget auto-opens
       window.voiceflow.chat.open();
     };
     v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
